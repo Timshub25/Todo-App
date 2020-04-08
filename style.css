@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    276deg,
+    rgba(235, 200, 81, 1) 1%,
+    rgba(200, 122, 20, 1) 66%
+  );
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.2rem;
+}
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  background: white;
+  font-size: 2rem;
+  border: none;
+}
+form button {
+  padding: 0.6rem;
+  color: rgb(200, 122, 20);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-left: 0.3em;
+}
+form button:hover {
+  color: white;
+  background: #423e39;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style: none;
+}
+
+.todo {
+  background: white;
+  color: black;
+  margin-bottom: 1em;
+  display: flex;
+  transition: all 1s ease;
+}
+.todo-item {
+  margin-right: auto;
+  font-size: 1.4rem;
+  padding: 0em 0.8em;
+}
+
+.delete-btn,
+.complete-btn {
+  background: #c22b06;
+  color: white;
+  border: none;
+  padding: 0em 1.5em;
+  cursor: pointer;
+}
+.complete-btn {
+  background: #e0b404;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.delete-btn:hover,
+.complete-btn:hover {
+  background: black;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translatey(8em) rotate(45deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  width: 14rem;
+  color: #e08804;
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.select {
+  margin: 1em;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background: #e08804;
+  pointer-events: none;
+  padding: 1em;
+  transition: all 0.5s ease;
+}
+
+.select:hover::after {
+  background: black;
+}
